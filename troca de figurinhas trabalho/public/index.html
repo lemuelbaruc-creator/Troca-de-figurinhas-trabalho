@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de Figurinhas - Copa do Mundo</title>
+    <meta name="description" content="Plataforma para acompanhar progresso do álbum da Copa do Mundo e trocar figurinhas repetidas.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">⚽ Álbum da Copa</div>
+        <div class="user-info">
+            <span id="user-name">Carregando...</span>
+            <span class="progress-badge" id="header-progress">0%</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Dashboard de Progresso -->
+        <section class="card" id="progress-dashboard">
+            <h2>Meu Álbum</h2>
+            <div class="stats">
+                <div class="stat-item success">
+                    <span class="icon">✔️</span>
+                    <span class="label">Obtidas</span>
+                    <strong id="stat-collected">0</strong>
+                </div>
+                <div class="stat-item danger">
+                    <span class="icon">❌</span>
+                    <span class="label">Faltantes</span>
+                    <strong id="stat-missing">0</strong>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="album-progress-bar" style="width: 0%;"></div>
+            </div>
+            <p class="progress-text"><span id="album-percentage">0</span>% Completo</p>
+        </section>
+
+        <!-- Área de Repetidas -->
+        <section class="card" id="repeated-area">
+            <h2>Minhas Repetidas</h2>
+            <ul class="sticker-list" id="repeated-list">
+                <!-- Populado por JS -->
+            </ul>
+        </section>
+
+        <!-- Área de Trocas -->
+        <section class="card" id="trades-area">
+            <h2>Buscar Trocas</h2>
+            <div class="trade-box" id="trade-opportunities">
+                <!-- Populado por JS -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
